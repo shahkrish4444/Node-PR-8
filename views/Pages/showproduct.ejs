@@ -1,0 +1,45 @@
+<%- include('../partials/Header.ejs') -%>
+    <div class="page-wrapper mt-80 p-4">
+        <h2 class="text-light mb-4">Product List</h2>
+        <table class="table table-light table-bordered table-hover table-responsive table-striped">
+            <thead>
+                <tr>
+                    <th class="text-center">S.R. No.</th>
+                    <th class="text-center">NAME</th>
+                    <th class="text-center">DESCRIPTION</th>
+                    <th class="text-center">EXTRA CATEGORY</th>
+                    <th class="text-center">SUB CATEGORY</th>
+                    <th class="text-center">CATEGORY</th>
+                    <th class="text-center">PRICE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach((product, i)=> { %>
+                    <tr>
+                        <td class="text-center">
+                            <%= i + 1 %>
+                        </td>
+                        <td>
+                            <%= product.title || 'N/A' %>
+                        </td>
+                        <td>
+                            <%= product.description || 'N/A' %>
+                        </td>
+                        <td>
+                            <%= product.extraCategoryId ? product.extraCategoryId.name : 'N/A' %>
+                        </td>
+                        <td>
+                            <%= product.subCategoryId ? product.subCategoryId.name : 'N/A' %>
+                        </td>
+                        <td>
+                            <%= product.categoryID ? product.categoryID.name : 'N/A' %>
+                        </td>
+                        <td>
+                            <%= parseFloat(product.price || 0).toFixed(2) %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </div>
+    <%- include('../partials/Footer.ejs') -%>

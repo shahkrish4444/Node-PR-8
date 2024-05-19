@@ -1,0 +1,21 @@
+<%- include('../partials/Header.ejs') -%>
+    <div class="page-wrapper mt-80 p-4">
+        <form action="/product/create" method="post">
+            <h2 class="text-light mb-4">Add Product</h2>
+            <input type="text" class="form-control mb-3" name="title" placeholder="NAME">
+            <textarea name="description" class="form-control mb-3" id="" cols="30" rows="10"
+                placeholder="DESCRIPTION"></textarea>
+            <select name="extrCatId" class="form-select mb-3" id="">
+                <% extaradata.map((val)=>{ %>
+                    <option value="<%= val._id%>">
+                        <%= val.name%>
+                            < <%=val.subCategoryId.name%>
+                                < <%=val.subCategoryId.categoryId.name%>
+                    </option>
+                    <% }) %>
+            </select>
+            <input type="number" class="form-control mb-3" name="price" placeholder="PRIZE">
+            <button class="btn btn-light">ADD</button>
+        </form>
+    </div>
+    <%- include('../partials/Footer.ejs') -%>

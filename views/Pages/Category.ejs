@@ -1,0 +1,11 @@
+<%- include('../partials/Header.ejs') -%>
+    <div class="page-wrapper mt-80 p-4">
+
+        <h2 class="text-light mb-4">Add Category</h2>
+        <form method="post" action="/category">
+            <input type="text" name="name" placeholder="Category Name" class="form-control mb-3">
+            <button type="submit" class="btn btn-light">ADD</button>
+        </form>
+    </div>
+
+    <%- include('../partials/Footer.ejs') -%>

@@ -1,0 +1,39 @@
+.ms-300 {
+    margin-left: 250px !important;
+}
+
+.page-wrapper {
+    margin-left: 270px !important;
+    margin-right: 20px !important;
+    background-color: #181717 !important;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.w-300 {
+    width: 250px !important;
+}
+
+.border-my {
+    border-bottom: 2px solid #fff;
+}
+
+.border-e {
+    border-right: 2px solid #fff;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.bg-dark {
+    background-color: #181717 !important;
+}
+
+textarea {
+    max-height: 100px !important;
+}
+
+.mt-80 {
+    margin-top: 80px !important;
+}

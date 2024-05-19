@@ -1,0 +1,17 @@
+<%- include('../partials/Header.ejs') -%>
+    <div class="page-wrapper mt-80 p-4">
+
+        <h2 class="text-light mb-4">Add Sub Category</h2>
+        <form method="post" action="/subcategory">
+            <input type="text" name="name" placeholder="Enter SubCategory Name" class="form-control mb-3">
+            <select name="categoryId" id="" class="form-select mb-3">
+                <option disabled selected>Select Category</option>
+                <% catdata.forEach((data,i)=>{%>
+                    <option value=<%=data.id %>><%= data.name %>
+                    </option>
+                    <% }) %>
+            </select>
+            <button type="submit" class="btn btn-light">ADD</button>
+        </form>
+    </div>
+    <%- include('../partials/Footer.ejs') -%>
